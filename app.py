@@ -1,6 +1,7 @@
 from flask import Flask, redirect, url_for, render_template
 from girls import womens
 from boys import mens
+from baby import kid
 
 app = Flask(__name__)
 
@@ -61,20 +62,28 @@ def accessories():
 
 @app.route("/kids")
 def kids():
-    return render_template("kids.html")
+    return render_template("kids.html",products=kid)
 
 @app.route("/kids/infants")
 def infants():
-    return render_template("infants.html")
+    return render_template("infants.html",products=kid)
 
 @app.route("/kids/boys")
 def boys():
-    return render_template("boys.html")
+    return render_template("boys.html",products=kid)
 
 @app.route("/kids/girls")
 def girls():
-    return render_template("girls.html")
+    return render_template("girls.html",products=kid)
 
+
+
+@app.route("/women/product/<int:product_id>")
+def product_detail(product_id):
+    product = womens.get(product_id)
+    if not product:
+        return "Product not found", 404
+    return render_template("product_details.html", product=product)
 
 
 

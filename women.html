@@ -9,7 +9,9 @@
         <span class="author-name">By Wearly</span>
       </div>
 
-      <img src="{{ url_for('static', filename='image/' + product.image) }}" alt="{{ product.name }}" class="product-main-image">
+      <a href="{{ url_for('product_detail', product_id=product_id) }}">
+        <img src="{{ url_for('static', filename='image/' + product.image) }}" alt="{{ product.name }}" class="product-main-image">
+      </a>
 
       <div class="product-info">
         <h3>{{ product.name }}</h3>

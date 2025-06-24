@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block content %}
+<div class="product-detail-container">
+    <div class="product-gallery-section">
+        <div class="main-gallery">
+            {% if product.images %}
+                {% for img in product.images %}
+                    <img src="{{ url_for('static', filename='image/' + img) }}" alt="{{ product.name }}" class="gallery-img">
+                {% endfor %}
+            {% else %}
+                <img src="{{ url_for('static', filename='image/' + product.image) }}" alt="{{ product.name }}" class="gallery-img">
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="product-info-section">
+        <h2 class="product-name">{{ product.name }}</h2>
+        <div class="price-section">
+            <span class="price">₹{{ product.price }}</span>
+            {% if product.original_price %}
+                <span class="original-price">₹{{ product.original_price }}</span>
+            {% endif %}
+            {% if product.badge %}
+                <span class="badge">{{ product.badge }}</span>
+            {% endif %}
+        </div>
+
+        <p class="rating">⭐ {{ product.rating }} ({{ product.reviews }} reviews)</p>
+        <p class="category">Category: <strong>{{ product.category }}</strong></p>
+
+        <div class="action-buttons">
+            <button class="add-to-cart-btn">🛒 Add to Cart</button>
+            <button class="like-btn" onclick="toggleLike(this)">♡</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    function toggleLike(button) {
+        button.classList.toggle('liked');
+        button.textContent = button.classList.contains('liked') ? '❤️' : '♡';
+    }
+</script>
+{% endblock %}

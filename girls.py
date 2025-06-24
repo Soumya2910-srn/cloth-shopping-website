@@ -4,6 +4,7 @@ womens={
         'price': 525.00,
         'original_price': 750.00,
         'image': 'asymetrictop.jpg',
+        'images': ['asymetrictop.jpg','Bodycon.jpg', 'straightlegjeans.jpg', 'bowloungeset.jpg'],
         'rating': 4.3,
         'reviews': 34,
         'category': 'western',

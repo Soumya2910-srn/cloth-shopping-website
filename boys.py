@@ -106,7 +106,7 @@ mens = {
         'image': 'cottonkurta.jpg',
         'rating': 4.6,
         'reviews': 65,
-        'category': 'ethnic',
+        'category': 'ethnics',
         'badge': '27% OFF'
     },
     12: {
@@ -116,7 +116,7 @@ mens = {
         'image': 'pathanisuit.jpg',
         'rating': 4.9,
         'reviews': 89,
-        'category': 'ethnic',
+        'category': 'ethnics',
         'badge': '26% OFF'
     },
     13: {
@@ -126,7 +126,7 @@ mens = {
         'image': 'nehrujacket.jpg',
         'rating': 4.8,
         'reviews': 59,
-        'category': 'ethnic',
+        'category': 'ethnics',
         'badge': '27% OFF'
     },
     14: {
@@ -136,7 +136,7 @@ mens = {
         'image': 'kurtapajama.jpg',
         'rating': 4.9,
         'reviews': 78,
-        'category': 'ethnic',
+        'category': 'ethnics',
         'badge': '29% OFF'
     },
     15: {
@@ -146,7 +146,7 @@ mens = {
         'image': 'shortkurta.jpg',
         'rating': 4.5,
         'reviews': 44,
-        'category': 'ethnic',
+        'category': 'ethnics',
         'badge': '28% OFF'
     }
 }
